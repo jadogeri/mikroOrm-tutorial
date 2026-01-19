@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "rootDirs": ["src"],
+    "outDir": "./dist",
+    "lib": ["es2023"],
+    "target": "es2023",
+    "module": "esnext",
+    "strictPropertyInitialization": false,  
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "types": ["node", "jest"],
+    "typeRoots": ["./node_modules/@types"],    
+  },
+  "include": [
+    "src/**/*",
+    "tests/**/*" ,
+    "env.d.ts",
+    "jest.config.ts"
+  ],
+  "exclude": [
+    "./node_modules/*",
+    "node_modules",  
+    "tests/**/*",
+    "tests"  
+  ],
+  "files": ["env.d.ts"],
+  
+}
