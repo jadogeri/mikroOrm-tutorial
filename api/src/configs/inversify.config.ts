@@ -3,6 +3,7 @@ import { Container, decorate, injectable } from 'inversify';
 import { Controller } from 'tsoa';
 import { buildProviderModule } from "inversify-binding-decorators";
 import { TYPES } from '../types/di.type';
+import { UserControllerInterface } from '../interfaces/user-controller.interface';
 
 
 
@@ -14,7 +15,7 @@ iocContainer.load(buildProviderModule());
   //  0. bind controllers
   
 const configureIoC = () => {
-    iocContainer.bind<UserControllerInterface>(CategoryController).toSelf();
+    iocContainer.bind<UserControllerInterface>(UserController).toSelf();
 
     // 1. Bind the service that manages the connection
     iocContainer.bind<SQLiteService>(SQLiteService).toSelf().inSingletonScope();

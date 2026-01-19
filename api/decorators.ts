@@ -1,7 +1,14 @@
-import { injectable } from "inversify";
+import { injectable, inject } from "inversify";
+import { Middlewares } from "tsoa";
 
-export const Service = injectable;
+const Service = injectable;
 
-export const Repository = injectable;
+const Repository = injectable;
 
-export const Controller = injectable;
+const Controller = injectable;
+
+const AutoWired = inject;
+
+const Middleware = Middlewares
+
+export { Service, Repository, Controller, Middleware, AutoWired  };
