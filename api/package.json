@@ -1,0 +1,30 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Express app using MikroOrm and TSOA",
+  "keywords": [
+    "MikroOrm",
+    "Express",
+    "TSOA",
+    "NodeJS",
+    "API",
+    "Typescript",
+    "ORM",
+    "SQLite"
+  ],
+  "homepage": "https://github.com/jadogeri/mikroOrm-tutorial#readme",
+  "bugs": {
+    "url": "https://github.com/jadogeri/mikroOrm-tutorial/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/mikroOrm-tutorial.git"
+  },
+  "license": "MIT",
+  "author": "Joseph Adogeri",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
