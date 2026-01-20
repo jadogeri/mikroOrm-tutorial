@@ -23,23 +23,49 @@
   "license": "MIT",
   "author": "Joseph Adogeri",
   "type": "module",
-  "main": "index.ts",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx watch --include src src/server.ts",
+    "test": "jest --coverage",
+    "dev": "cross-env NODE_ENV=development tsx watch --include src src/server.ts",
+    "prod": "cross-env NODE_ENV=production tsx watch --include src src/server.ts",
+    "build": "npm run swagger:generate && tsc && tsc-esm-fix --target='dist'",
+    "dist": "node dist/src/server.js",
+    "typeorm": "typeorm-ts-node-commonjs --dataSource ./src/configs/typeOrm.config.ts",
+    "migration:create": "npx typeorm-ts-node-commonjs migration:create ./src/migrations/InitialSchemaSetup",
+    "migration:generate": "npx tsx ./node_modules/typeorm/cli.js migration:generate ./src/migrations/InitialSchemaSetup --dataSource ./src/configs/typeOrm.config.ts --pretty",
+    "migration:run": "npx tsx ./node_modules/typeorm/cli.js migration:run --dataSource ./src/configs/typeOrm.config.ts",
+    "migration:revert": "npx typeorm-ts-node-commonjs migration:revert --dataSource ./src/configs/typeOrm.config.ts",
+    "swagger:generate": "tsoa spec-and-routes"
   },
   "dependencies": {
     "@mikro-orm/core": "^6.6.4",
+    "@mikro-orm/migrations": "^6.6.4",
     "@mikro-orm/reflection": "^6.6.4",
     "@mikro-orm/sqlite": "^6.6.4",
     "@tsoa/cli": "^7.0.0-alpha.0",
     "@tsoa/runtime": "^7.0.0-alpha.0",
-    "@types/node": "^25.0.9",
+    "cors": "^2.8.5",
     "inversify": "^7.11.0",
     "inversify-binding-decorators": "^4.0.0",
+    "jest": "^30.2.0",
     "reflect-metadata": "^0.2.2",
     "sqlite3": "^5.1.7",
+    "swagger-ui-express": "^5.0.1",
+    "ts-jest": "^29.4.6",
+    "tsoa": "^7.0.0-alpha.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.9",
+    "@types/swagger-ui-express": "^4.1.8",
+    "cross-env": "^10.1.0",
     "ts-node": "^10.9.2",
-    "tsoa": "^7.0.0-alpha.0",
+    "tsc-esm-fix": "^3.1.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }

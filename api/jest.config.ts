@@ -1,11 +1,11 @@
-import type { Config } from 'jest';
+import { Config } from "jest";
 
 const config: Config = {
   preset: 'ts-jest/presets/default-esm', // Use ESM preset
   testEnvironment: 'node',
   extensionsToTreatAsEsm: ['.ts'],
   transform: {
-    // Transform TypeScript files with ts-jest in ESM mode
+    // Transform TypeScrimipt files with ts-jest in ESM mode
     '^.+\\.tsx?$': [
       'ts-jest',
       {

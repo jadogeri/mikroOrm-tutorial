@@ -1,10 +1,10 @@
 
 export interface UserControllerInterface{
 
-  createUser(requestBody: any): Promise<any>;
-  getUser(userId: string): Promise<any>;
+  createUser(requestBody: { name: string; email: string }): Promise<any>;
+  getUser(userId: number): Promise<any>;
   getUsers(): Promise<any>;
-  updateUser(userId: string, requestBody: any): Promise<any>;
-  deleteUser(userId: string): Promise<any>;
+  updateUser(userId: number, requestBody: { name?: string; email?: string }): Promise<any>;
+  deleteUser(userId: number): Promise<any>;
   
 }

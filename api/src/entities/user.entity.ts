@@ -2,10 +2,10 @@ import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
 
 @Entity()
 export class User {
-  @PrimaryKey()
+  @PrimaryKey({ type: 'number' })
   id!: number;
 
-  @Property()
+  @Property({ type: 'string' })
   name!: string;
 
   @Property({ type: 'text' }) // Use text for potentially longer descriptions

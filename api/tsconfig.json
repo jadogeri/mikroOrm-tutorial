@@ -17,14 +17,13 @@
   },
   "include": [
     "src/**/*",
-    "tests/**/*" ,
     "env.d.ts",
     "jest.config.ts"
-  ],
+, "tests/controllers"  ],
   "exclude": [
     "./node_modules/*",
     "node_modules",  
-    "tests/**/*",
+    "./tests/**/*",
     "tests"  
   ],
   "files": ["env.d.ts"],
