@@ -1,3 +1,11 @@
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description User repository for handling user-related database operations
+ * 
+ */
+
 import { User } from '../entities/user.entity';
 import { inject } from 'inversify';
 import { Repository } from '../decorators';

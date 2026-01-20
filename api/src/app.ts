@@ -1,4 +1,11 @@
 "reflect-metadata";
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description Express application setup for the MikroORM tutorial API
+ * 
+ */
 
 import "./controllers/user.controller.js";
 import express, { Request, Response, Application } from 'express';

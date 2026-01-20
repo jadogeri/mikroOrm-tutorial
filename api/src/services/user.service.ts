@@ -1,3 +1,11 @@
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description User service for handling user-related operations
+ * 
+ */
+
 import { AutoWired } from "../decorators";
 import { User } from "../entities/user.entity";
 import { ConflictError } from "../errors/conflict.error";

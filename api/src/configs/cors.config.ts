@@ -1,3 +1,11 @@
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description configuration of CORS
+ * 
+ */
+
 import { CorsOptions } from 'cors';
 
 // Add a list of allowed origins (e.g., your frontend application's URL)

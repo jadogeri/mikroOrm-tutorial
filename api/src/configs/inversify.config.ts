@@ -1,5 +1,10 @@
-// src/ioc.config.ts
-import { Container, decorate, injectable } from 'inversify';
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description configuration of InversifyJS dependency injection container
+ * 
+ */import { Container, decorate, injectable } from 'inversify';
 import { Controller } from 'tsoa';
 import { buildProviderModule } from "inversify-binding-decorators";
 import { TYPES } from '../types/di.type';

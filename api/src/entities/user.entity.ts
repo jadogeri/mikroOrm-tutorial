@@ -1,3 +1,10 @@
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description User entity
+ * 
+ */
 import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
 
 @Entity()

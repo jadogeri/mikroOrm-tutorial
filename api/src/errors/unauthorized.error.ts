@@ -1,4 +1,10 @@
-
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description Unauthorized error class for handling HTTP 401 Unauthorized errors
+ * 
+ */
 import { ERROR_NAMES } from "../constants/error-names.constants";
 import { STATUS_CODES } from "../constants/status-codes.constants";
 import { ApiError } from "./api.error";

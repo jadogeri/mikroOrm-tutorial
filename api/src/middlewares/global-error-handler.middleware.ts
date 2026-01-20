@@ -1,3 +1,11 @@
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description Global error handler middleware for handling various types of errors
+ * 
+ */
+
 import { Response, Request,NextFunction } from "express";
 import { ValidateError } from "tsoa";
 import { HttpError } from "../errors/http.error";

@@ -1,3 +1,11 @@
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description user controller
+ * 
+ */
+
 import { UserControllerInterface } from "../interfaces/user-controller.interface";
 import { UserServiceInterface } from "../interfaces/user-service.interface";
 import { Controller as BaseController, Body, Delete, Get, Post, Put, Route, Tags, Response, Path, Example, SuccessResponse, Res, TsoaResponse, Security, NoSecurity, Patch} from "tsoa";

@@ -1,4 +1,11 @@
 import "reflect-metadata";
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description Entry point for the MikroORM tutorial API server
+ * 
+ */
 import * as dotenv from "dotenv";
 dotenv.config();
 import {buildApp} from "./app.js";

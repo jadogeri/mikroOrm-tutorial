@@ -1,3 +1,11 @@
+/**
+ * @author Joseph Adogeri
+ * @version 1.0
+ * @since 19-JAN-2026
+ * @description SQLite service for handling database operations using MikroORM
+ * 
+ */
+
 import { DatabaseServiceInterface } from "../interfaces/database-service.interface.js";
 import { microOrmConfig } from "../configs/mikro-orm.config.js";
 import { Service } from "../decorators.js";
