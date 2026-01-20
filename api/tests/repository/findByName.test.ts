@@ -1,5 +1,7 @@
 import { SqlEntityManager } from "@mikro-orm/sqlite";
-import { UserRepository } from '../user.repository';
+import { UserRepository } from '../../src/repositories/user.repository';
+import { jest, describe, it, expect } from "@jest/globals";
+
 
 
 
@@ -46,7 +48,7 @@ describe('UserRepository.findByName() findByName method', () => {
 
     it('should return null when no user with the given name exists', async () => {
       // This test verifies that findByName returns null when no user is found.
-      const findOneMock = jest.fn().mockResolvedValue(null);
+      const findOneMock = jest.fn().mockResolvedValue(null as any as never);
       const userRepository = createUserRepositoryWithFindOneMock(jest.mocked(findOneMock));
 
       const result = await userRepository.findByName('NonExistentUser');
@@ -70,7 +72,7 @@ describe('UserRepository.findByName() findByName method', () => {
   describe('Edge Cases', () => {
     it('should handle empty string as name and call findOne with empty name', async () => {
       // This test checks behavior when an empty string is provided as the name.
-      const findOneMock = jest.fn().mockResolvedValue(null);
+      const findOneMock = jest.fn().mockResolvedValue(null as any as never  );
       const userRepository = createUserRepositoryWithFindOneMock(jest.mocked(findOneMock));
 
       const result = await userRepository.findByName('');
@@ -106,7 +108,7 @@ describe('UserRepository.findByName() findByName method', () => {
     it('should handle very long name strings', async () => {
       // This test checks that very long name strings are handled correctly.
       const longName = 'a'.repeat(1000);
-      const findOneMock = jest.fn().mockResolvedValue(null);
+      const findOneMock = jest.fn().mockResolvedValue(null as any as never);
       const userRepository = createUserRepositoryWithFindOneMock(jest.mocked(findOneMock));
 
       const result = await userRepository.findByName(longName);
