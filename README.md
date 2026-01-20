@@ -1,29 +1,24 @@
-## **USER GRAPHQL SERVER**
+## **MIKROORM TUTORIAL**
 
 **Version:** 1.0.0
-**Date:** January 13, 2026
+**Date:** January 19, 2026
 
 ---
 
-![GraphQL Logo](/assets/images/mikroorm_logo.svg)
+![MIKOORM Logo](/assets/images/mikroorm_logo.svg)
 
 
 ## Description
 
-This is a beginner friendly backend application (typescript) to utilize graphql for data retrieval or modification and typeorm for mapping class to database table.
+This is a beginner friendly backend application (typescript) to utilize mikroorm for mapping class to database table.
 
 ## Authors
 
 - [@jadogeri](https://www.github.com/jadogeri)
 
-## Acknowledgements
-
-- Design and template inspired by [FreeCodeCamp / Net Ninja](https://www.youtube.com/watch?v=5199E50O7SI)
-
-
 ## Repository
 
-- [source code ](https://github.com/jadogeri/User_GraphQL_Server.git)
+- [source code ](https://github.com/jadogeri/mikroOrm-tutorial.git)
 
 ## Screenshots
 
@@ -75,9 +70,8 @@ This is a beginner friendly backend application (typescript) to utilize graphql 
 
 ### **1.1 Purpose**
 
-This document outlines the components, and design considerations for retrieving data using graphql from an express app.
+This document outlines the components, and design considerations for retrieving data using mikro orm.
 
-Note: Mutations performed during session will not persist once server restarts. This app is for learning purpose.
 
 ## **2. Installation**
 
@@ -87,9 +81,9 @@ Note: Mutations performed during session will not persist once server restarts. 
 
 ## **3. Technology Stack**
 
-- **Programming Languages**: Typescript, GraphQL
+- **Programming Languages**: Typescript
 - **IDE**: Visual Studio Code (VSCode)
-- **Backend Frameworks**: Apollo Server
+- **Backend Frameworks**: MikroORM
 - **Database**: SQLite
 - **Container**: Docker
 - **Test**: Jest 
@@ -97,6 +91,7 @@ Note: Mutations performed during session will not persist once server restarts. 
 - **Version Control**: Git and GitHub
 - **CI/CD**: GitHub Actions
 - **Code Analsis**: SonarQube
+- **API Documentation**: Swagger 3.0
 
 ---
 
@@ -108,16 +103,16 @@ Note: Mutations performed during session will not persist once server restarts. 
 
 1 Open command prompt or terminal.
 
-2 Type command git clone https://github.com/jadogeri/User_GraphQL_Server.git then press enter.
+2 Type command git clone https://github.com/jadogeri/mikroOrm-tutorial.git then press enter.
 
 ```bash
-  git clone https://github.com/jadogeri/User_GraphQL_Server.git
+  git clone https://github.com/jadogeri/mikroOrm-tutorial.git
 ```
 
-3 Enter command cd graphql-tutorial-ts/server then press enter.
+3 Enter command cd mikroOrm-tutorial/api then press enter.
 
 ```bash
-  cd User_GraphQL_Server/server
+  cd mikroOrm-tutorial/api
 ```
 
 #### **4.1.1 Run Locally**
@@ -131,10 +126,10 @@ Note: Mutations performed during session will not persist once server restarts. 
 2 Type npm run dev to run application
 
 ```bash
-  npm run dev
+  npm start
 ```
 
-3 type or copy `http://localhost:4000` to address bar to open apollo server and run querries.
+3 type or copy `http://localhost:3000` to address bar to open apollo server and run querries.
 
 ![Screenshot 1](assets/images/usage.png)
 
@@ -142,32 +137,32 @@ Note: Mutations performed during session will not persist once server restarts. 
 
 #### **4.1.2 Run Docker container**
 
-1 Type docker build -t server-image . in command line to build docker image.
+1 Type docker build -t mikroorm-image . in command line to build docker image.
 
 ```bash
-  docker build -t server-image .
+  docker build -t mikroorm-image .
 ```
 
 ![dockerbuild](assets/images/dockerimage.png)
 
-2 Type docker run --name server-container -d -it -p 4000:4000 server-image to create and start container immediately.
+2 Type docker run --name mikroorm-container -d -it -p 3000:3000 mikroorm-image to create and start container immediately.
 
 ```bash
-  docker run --name server-container -d -it -p 4000:4000 server-image
+  docker run --name mikroorm-container -d -it -p 3000:3000 mikroorm-image
 ```
 
 ![dockerbuild](assets/images/dockerrun.png)
 
-4 Type docker stop server-container to stop container.
+4 Type docker stop mikroorm-container to stop container.
 
 ```bash
-  docker stop server-container
+  docker stop mikroorm-container
 ```
 
-5 Type docker start server-container to start container.
+5 Type docker start mikroorm-container to start container.
 
 ```bash
-  docker start server-container
+  docker start mikroorm-container
 ```
 
 ---
@@ -188,7 +183,5 @@ Note: Mutations performed during session will not persist once server restarts. 
 * FreeCodeCamp : [Frontend Web Development: (HTML, CSS, JavaScript, TypeScript, React)](https://www.youtube.com/watch?v=MsnQ5uepIa).
 * AweSome Open Source : [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 * Readme.so : [The easiest way to create a README](https://readme.so/)
-* FreeCodeCamp : [GraphQL Course for Beginners](https://www.youtube.com/watch?v=5199E50O7SI)
-* Apollo Server : [GraphQL Tutorial in Typescript](https://www.apollographql.com/docs/apollo-server/getting-started)
-* Easy Devv: [TypeGrapQL Tutorial with Code Examples](https://easydevv.com/type-graphql-tutorial-with-code-examples/)
-* FreeCodeCamp: [How to use Typescript with GraphQL](https://www.freecodecamp.org/news/how-to-use-typescript-with-graphql/)
+* MikroOrm : [Mikro ORM](https://mikro-orm.io/)
+

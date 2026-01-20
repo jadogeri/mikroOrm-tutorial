@@ -56,7 +56,7 @@ describe('UserController.getUser()', () => {
     // Tests for falsy values (0, NaN, undefined)
     const invalidIds = [
       { id: 0, label: '0' },
-      { id: NaN, label: 'NaN' },
+      { id: Number.NaN, label: 'NaN' },
       { id: undefined as any, label: 'undefined' }
     ];
 
