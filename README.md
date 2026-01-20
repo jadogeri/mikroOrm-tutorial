@@ -61,7 +61,11 @@ This is a beginner friendly backend application (typescript) to utilize mikroorm
       </li>
     </ul> 
     <ul> 
-      <li><a href="#6-references">6. References</a>
+      <li><a href="#6-api-documentation">6. API Documentation</a>
+      </li>
+    </ul> 
+    <ul> 
+      <li><a href="#7-references">7. References</a>
       </li>
     </ul>
 </ul>
@@ -178,7 +182,18 @@ This document outlines the components, and design considerations for retrieving 
 
 ---
 
-## **6. References**
+## **6. API Documentation**
+
+3 type or copy `http://localhost:3000/docs` in address bar to access API documentation.
+
+```bash
+  http://localhost:3000/docs
+```
+
+![API Documentation](assets/images/apiDocumentation.png)
+---
+
+## **7. References**
 
 * FreeCodeCamp : [Frontend Web Development: (HTML, CSS, JavaScript, TypeScript, React)](https://www.youtube.com/watch?v=MsnQ5uepIa).
 * AweSome Open Source : [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
