@@ -65,6 +65,16 @@ export class UserController extends BaseController implements UserControllerInte
     return this.userService.getAll();
   }
 
+/**
+ * Updates user details with provided name and/or email.
+ * Validates input and user ID before calling the update service.
+ * Throws error if required data is missing.
+ * 
+ * @param userId - The ID of the user to update.
+ * @param requestBody - Object containing optional name and email fields.
+ * @returns Promise resolving to the updated user data.
+ * @throws BadRequestError if userId is missing or no update fields are provided.
+ */
   @Patch("/{userId}") 
   async updateUser(@Path() userId: number,@Body() requestBody: { name?: string; email?: string }): Promise<any> {
     if (!requestBody.name && !requestBody.email) {
@@ -76,6 +86,15 @@ export class UserController extends BaseController implements UserControllerInte
     return this.userService.update(userId, requestBody);
   }
 
+/**
+ * Deletes a user by their ID.
+ * Validates the presence of userId before deletion.
+ * Calls the user service to perform the deletion.
+ * 
+ * @param userId - The ID of the user to delete.
+ * @returns A promise resolving to the deletion result.
+ * @throws BadRequestError if userId is not provided.
+ */
   @Delete("/{userId}")
   async deleteUser(@Path() userId: number): Promise<any> {
     if (!userId) {

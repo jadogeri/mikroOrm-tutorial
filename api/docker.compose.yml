@@ -1,0 +1,18 @@
+# Use the latest version of the Docker Compose file format
+version: '3.8'
+
+# Define the services (containers) that make up your application
+services:
+  # Name your service (e.g., 'node-app' or 'web-service')
+  node-app:
+    # Use the Dockerfile in the current directory (`.`) to build the image
+    build: .
+    # Map the container's exposed port (3000) to the host machine's port (3000)
+    ports:
+      - "3000:3000"
+    # Ensure the container restarts automatically if it crashes
+    restart: always
+    # Set the environment variables defined in the Dockerfile
+    environment:
+      # Use the PORT specified in the Dockerfile (ENV PORT=3000)
+      PORT: 3000
