@@ -18,6 +18,15 @@ export class UserService implements UserServiceInterface {
 
     @AutoWired(TYPES.UserRepositoryInterface)
     private readonly userRepository!:  UserRepositoryInterface;  
+/**
+ * Creates a new user if the name and email are unique.
+ * Checks for existing users by name and email before creation.
+ * Returns the newly created user entity.
+ * 
+ * @param requestBody - Object containing user details (name, email, etc.)
+ * @returns Promise resolving to the created user entity.
+ * @throws ConflictError if a user with the same name or email already exists.
+ */
     async create(requestBody: any): Promise<any> {
         const { name, email } = requestBody;
         const userbyName = await this.userRepository.findByName(name);
@@ -31,6 +40,14 @@ export class UserService implements UserServiceInterface {
         const newUser : User=  this.userRepository.getEntityManager().create(User, requestBody);
         return newUser;
     }
+/**
+ * Retrieves a user by their unique ID from the repository.
+ * Throws an error if the user is not found.
+ * 
+ * @param userId - The unique identifier of the user to retrieve.
+ * @returns A promise that resolves to the user object.
+ * @throws ResourceNotFoundError when no user with the given ID exists.
+ */
     async getOne(userId: number): Promise<any> {
         const foundUser = await this.userRepository.findOne({ id: userId });
         if (!foundUser) {
@@ -38,6 +55,12 @@ export class UserService implements UserServiceInterface {
         }
         return foundUser;
     }
+/**
+ * Retrieves all user records from the repository.
+ * 
+ * @returns Promise resolving to an array of user entities.
+ * @throws Propagates any errors thrown by the userRepository.
+ */
     async getAll(): Promise<any> {
         return await this.userRepository.findAll();
     }

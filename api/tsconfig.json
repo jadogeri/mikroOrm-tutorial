@@ -19,7 +19,7 @@
     "src/**/*",
     "env.d.ts",
     "jest.config.ts"
-, "tests/controllers", "tests/repository"  ],
+, "tests/controllers", "tests/repository", "tests/services"  ],
   "exclude": [
     "./node_modules/*",
     "node_modules",  
