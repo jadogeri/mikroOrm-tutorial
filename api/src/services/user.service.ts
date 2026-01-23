@@ -64,6 +64,16 @@ export class UserService implements UserServiceInterface {
     async getAll(): Promise<any> {
         return await this.userRepository.findAll();
     }
+/**
+ * Updates an existing user with the provided data.
+ * Throws an error if the user is not found.
+ * Returns the updated user object.
+ * 
+ * @param userId - The ID of the user to update.
+ * @param requestBody - The data to update the user with.
+ * @returns The updated user object.
+ * @throws ResourceNotFoundError if the user does not exist.
+ */
     async update(userId: number, requestBody: any): Promise<any> {
         const foundUser = await this.userRepository.findOne({ id: userId });
         if (!foundUser) {
@@ -74,6 +84,15 @@ export class UserService implements UserServiceInterface {
         const updatedUser = await this.userRepository.findOne({ id: userId });
         return updatedUser;
     }
+/**
+ * Deletes a user by their ID from the repository.
+ * Throws an error if the user does not exist.
+ * Returns a confirmation message upon successful deletion.
+ * 
+ * @param userId - The ID of the user to delete.
+ * @returns A promise resolving to an object containing a deletion confirmation message.
+ * @throws ResourceNotFoundError if the user with the given ID is not found.
+ */
     async delete(userId: number): Promise<any> {
         const foundUser = await this.userRepository.findOne({ id: userId });
         if (!foundUser) {
