@@ -4,6 +4,7 @@
  * @version 1.0
  * @since 19-JAN-2026
  * @description Express application setup for the MikroORM tutorial API
+ * @file app.ts
  * 
  */
 
