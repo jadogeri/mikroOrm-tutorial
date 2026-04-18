@@ -1,6 +1,7 @@
 ## **MIKROORM TUTORIAL**
 
 **Version:** 1.0.0
+
 **Date:** January 19, 2026
 
 ---
@@ -107,13 +108,13 @@ This document outlines the components, and design considerations for retrieving 
 
 1 Open command prompt or terminal.
 
-2 Type command git clone https://github.com/jadogeri/mikroOrm-tutorial.git then press enter.
+2 Type command `git clone https://github.com/jadogeri/mikroOrm-tutorial.git` then press enter.
 
 ```bash
   git clone https://github.com/jadogeri/mikroOrm-tutorial.git
 ```
 
-3 Enter command cd mikroOrm-tutorial/api then press enter.
+3 Enter command `cd mikroOrm-tutorial/api` then press enter.
 
 ```bash
   cd mikroOrm-tutorial/api
@@ -121,13 +122,13 @@ This document outlines the components, and design considerations for retrieving 
 
 #### **4.1.1 Run Locally**
 
-1 Type npm install --force to install dependencies.
+1 Type `npm install --force` to install dependencies.
 
 ```bash
   npm install --force
 ```
 
-2 Type npm run dev to run application
+2 Type `npm run dev` to run application
 
 ```bash
   npm start
@@ -141,7 +142,7 @@ This document outlines the components, and design considerations for retrieving 
 
 #### **4.1.2 Run Docker container**
 
-1 Type docker build -t mikroorm-image . in command line to build docker image.
+1 Type `docker build -t mikroorm-image .` in command line to build docker image.
 
 ```bash
   docker build -t mikroorm-image .
@@ -149,7 +150,7 @@ This document outlines the components, and design considerations for retrieving 
 
 ![dockerbuild](assets/images/dockerimage.png)
 
-2 Type docker run --name mikroorm-container -d -it -p 3000:3000 mikroorm-image to create and start container immediately.
+2 Type `docker run --name mikroorm-container -d -it -p 3000:3000 mikroorm-image` to create and start container immediately.
 
 ```bash
   docker run --name mikroorm-container -d -it -p 3000:3000 mikroorm-image
@@ -157,13 +158,13 @@ This document outlines the components, and design considerations for retrieving 
 
 ![dockerbuild](assets/images/dockerrun.png)
 
-4 Type docker stop mikroorm-container to stop container.
+4 Type `docker stop mikroorm-container` to stop container.
 
 ```bash
   docker stop mikroorm-container
 ```
 
-5 Type docker start mikroorm-container to start container.
+5 Type `docker start mikroorm-container` to start container.
 
 ```bash
   docker start mikroorm-container
